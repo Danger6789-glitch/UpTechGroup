@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Up Tech Group</title>
+  <meta name="description" content="Contactez Up Tech Group pour une demande de devis : nom, email, message." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Up Tech Group">
+        <img src="../assets/img/logo.svg" alt="Up Tech Group" class="brand-logo" />
+        <span class="brand-name">Up Tech Group</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="../index.html" data-i18n="nav.home">Accueil</a>
+        <a href="../expertises/index.html" data-i18n="nav.expertises">Expertises</a>
+        <a href="../secteurs/index.html" data-i18n="nav.sectors">Secteurs</a>
+        <a href="../a-propos/index.html" data-i18n="nav.about">À propos</a>
+        <a href="index.html" class="btn btn-small" data-i18n="nav.contact" aria-current="page">Contact</a>
+
+        <button class="lang-toggle" type="button" id="langToggle" aria-label="Changer de langue">
+          <span id="langLabel">FR</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <!-- HERO VISUEL -->
+    <section class="hero-visual">
+      <img src="../assets/img/contact-hero.jpg" alt="Visuel abstrait contact" />
+      <div class="hero-visual-content">
+        <div class="container">
+          <h1 class="hero-title" data-i18n="contact.title">Contact</h1>
+          <p class="hero-subtitle muted" data-i18n="contact.subtitle">
+            Décris ton besoin et reçois une proposition structurée par email.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-ghost" href="../expertises/index.html" data-i18n="contact.hero.ctaSecondary">
+              Voir les expertises
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="contact-grid">
+        <!-- Bloc infos -->
+        <div class="card contact-card">
+          <h2 class="h3" data-i18n="contact.infoTitle">Informations</h2>
+
+          <div class="info-row">
+            <div class="info-label" data-i18n="contact.infoEmailLabel">Email</div>
+            <div class="info-value">
+              <a class="link" href="mailto:sehouboariel@gmail.com">sehouboariel@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label" data-i18n="contact.infoLocationLabel">Localisation</div>
+            <div class="info-value" data-i18n="footer.location">Lomé, Togo</div>
+          </div>
+
+          <div class="note muted" data-i18n="contact.note">
+            Conseil : si ton projet a un site existant, colle le lien dans ton message.
+          </div>
+
+          <div class="divider"></div>
+
+          <h3 class="h4" data-i18n="contact.expectTitle">À quoi s’attendre</h3>
+          <ul class="muted list">
+            <li data-i18n="contact.expect1">Lecture de ta demande et clarification si nécessaire</li>
+            <li data-i18n="contact.expect2">Proposition structurée (périmètre, étapes, délais)</li>
+            <li data-i18n="contact.expect3">Plan d’exécution et prochaines actions</li>
+          </ul>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="card">
+          <h2 class="h3" data-i18n="contact.formTitle">Demander un devis</h2>
+          <p class="muted" data-i18n="contact.formSubtitle">
+            Champs simples : nom, email, message.
+          </p>
+
+          <form class="form" action="https://formspree.io/f/mdaldgdb" method="POST">
+            <label data-i18n="contact.formNameLabel">Nom</label>
+            <input name="name" required placeholder="Ton nom" data-i18n-placeholder="contact.formNamePH" />
+
+            <label data-i18n="contact.formEmailLabel">Email</label>
+            <input type="email" name="email" required placeholder="tonmail@email.com" data-i18n-placeholder="contact.formEmailPH" />
+
+            <label data-i18n="contact.formMsgLabel">Message</label>
+            <textarea name="message" rows="7" required placeholder="Décris ton besoin..." data-i18n-placeholder="contact.formMsgPH"></textarea>
+
+            <!-- Anti-spam simple (honeypot) -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <button class="btn" type="submit" data-i18n="contact.formSubmit">Envoyer</button>
+            <p class="muted small" data-i18n="contact.formHint">
+              Tu recevras une réponse par email. Pense à vérifier les spams si besoin.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <strong>Up Tech Group</strong>
+        <div class="muted" data-i18n="footer.tagline">Parce que le numérique n’est pas un luxe, mais une nécessité.</div>
+        <div class="muted" data-i18n="footer.location">Lomé, Togo</div>
+      </div>
+
+      <div class="footer-right">
+        <a class="link" href="../contact/index.html" data-i18n="footer.contact">Contact</a>
+        <a class="link" href="mailto:sehouboariel@gmail.com">sehouboariel@gmail.com</a>
+        <span class="muted">© <span id="year"></span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
