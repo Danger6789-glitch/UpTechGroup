@@ -1,0 +1,4 @@
+# Favicon / images — cPanel (Apache) : SVG doit être servi en image/svg+xml
+<IfModule mod_mime.c>
+  AddType image/svg+xml .svg
+</IfModule>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Livraison Gozem – Sophiate Création</title>
+<link rel="icon" href="assets/img/logo/favicon.ico"/>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<link rel="stylesheet" href="assets/css/livraison.css"/>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="toast"><div><strong class="t-title"></strong><span class="t-sub"></span></div></div>
+
+<div id="mobileMenu">
+  <button class="m-close" onclick="toggleMenu()">✕</button>
+  <a href="index.html">Accueil</a>
+  <a href="collections.html">Collections</a>
+  <a href="boutique.html">Boutique</a>
+  <a href="galerie.html">Galerie</a>
+  <a href="livraison.html" onclick="toggleMenu()">Livraison</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Sophiate <span>Création</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="collections.html">Collections</a></li>
+    <li><a href="boutique.html">Boutique</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="livraison.html" class="active">Livraison</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="btn-cart" onclick="Cart.open()">Panier <span class="cart-badge">0</span></button>
+    <button class="nav-menu-btn" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> › Livraison</div>
+    <h1>Livraison <em>Gozem</em></h1>
+    <p>Recevez vos créations directement chez vous à Lomé — rapide, sécurisé, suivi en temps réel.</p>
+  </div>
+</div>
+
+<!-- Comment ça marche -->
+<section class="delivery-how">
+  <div class="sec-hd reveal">
+    <span class="sec-tag">Comment ça marche</span>
+    <h2 class="sec-title">3 étapes <em>simples</em></h2>
+  </div>
+  <div class="delivery-steps-grid reveal">
+    <div class="d-step">
+      <div class="d-step-num">1</div>
+      <div class="d-step-icon">
+        <!-- Image : assets/img/livraison/step-boutique.jpg (optionnel) -->
+        <div class="d-step-icon-ph" style="background:var(--indigo)">
+          <span>Boutique</span>
+        </div>
+      </div>
+      <h3>Choisissez votre création</h3>
+      <p>Parcourez la boutique et ajoutez vos pièces favorites au panier. Boubous, ensembles, tenues de cérémonie.</p>
+    </div>
+    <div class="d-step-arrow">→</div>
+    <div class="d-step">
+      <div class="d-step-num">2</div>
+      <div class="d-step-icon">
+        <div class="d-step-icon-ph" style="background:var(--crimson)">
+          <span>Commande</span>
+        </div>
+      </div>
+      <h3>Confirmez la commande</h3>
+      <p>Renseignez votre adresse à Lomé. Paiement mobile money (Flooz, T-Money), carte ou cash à la livraison.</p>
+    </div>
+    <div class="d-step-arrow">→</div>
+    <div class="d-step">
+      <div class="d-step-num">3</div>
+      <div class="d-step-icon">
+        <div class="d-step-icon-ph" style="background:var(--gozem)">
+          <span>Livraison</span>
+        </div>
+      </div>
+      <h3>Gozem vous livre</h3>
+      <p>Un livreur Gozem récupère votre commande chez Sophiate Création et vous la livre sous 24h à votre adresse.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Avantages Gozem -->
+<section class="delivery-features">
+  <div class="delivery-features-inner">
+    <div class="reveal">
+      <span class="sec-tag">Pourquoi Gozem</span>
+      <h2 class="sec-title" style="color:#fff;margin-bottom:40px">Le meilleur partenaire <em>logistique</em></h2>
+      <div class="df-grid">
+        <div class="df-card">
+          <div class="df-icon-wrap">
+            <!-- <img src="assets/img/livraison/icon-express.png" alt="Express"> -->
+            <span class="df-icon-ph">24h</span>
+          </div>
+          <h4>Livraison express</h4>
+          <p>Sous 24h dans tout Lomé et Baguida. Suivi en temps réel via l'application Gozem.</p>
+        </div>
+        <div class="df-card">
+          <div class="df-icon-wrap">
+            <!-- <img src="assets/img/livraison/icon-gps.png" alt="GPS"> -->
+            <span class="df-icon-ph">GPS</span>
+          </div>
+          <h4>Suivi en direct</h4>
+          <p>Localisez votre livreur à tout moment sur la carte. Vous savez exactement où est votre commande.</p>
+        </div>
+        <div class="df-card">
+          <div class="df-icon-wrap">
+            <!-- <img src="assets/img/livraison/icon-payment.png" alt="Paiement"> -->
+            <span class="df-icon-ph">Pay</span>
+          </div>
+          <h4>Paiement flexible</h4>
+          <p>Flooz, T-Money, carte bancaire ou cash directement à la livraison. Vous choisissez.</p>
+        </div>
+        <div class="df-card">
+          <div class="df-icon-wrap">
+            <!-- <img src="assets/img/livraison/icon-secure.png" alt="Sécurisé"> -->
+            <span class="df-icon-ph">OK</span>
+          </div>
+          <h4>Livraison sécurisée</h4>
+          <p>Vos créations soigneusement emballées et assurées pendant tout le transport.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carte Gozem -->
+    <div class="gozem-info-card reveal">
+      <div class="gozem-info-header">
+        <div class="gz-logo-big">GOZEM</div>
+        <div>
+          <strong>Partenaire officiel</strong>
+          <span>Livraison à Lomé & Baguida</span>
+        </div>
+      </div>
+      <!-- Zone de couverture -->
+      <div class="coverage-zone">
+        <h4>Zones couvertes</h4>
+        <div class="zone-list">
+          <span class="zone-tag">Lomé centre</span>
+          <span class="zone-tag">Baguida</span>
+          <span class="zone-tag">Agoè</span>
+          <span class="zone-tag">Adidogomé</span>
+          <span class="zone-tag">Tokoin</span>
+          <span class="zone-tag">Hédzranawoé</span>
+          <span class="zone-tag">Kégué</span>
+          <span class="zone-tag">Légos</span>
+        </div>
+      </div>
+      <!-- Tarifs indicatifs -->
+      <div class="delivery-pricing">
+        <h4>Tarifs indicatifs</h4>
+        <!-- TODO API Gozem : les prix réels seront calculés automatiquement quand l'API est activée -->
+        <div class="pricing-row">
+          <span>Lomé centre</span>
+          <span class="pricing-price">~1 000 FCFA</span>
+        </div>
+        <div class="pricing-row">
+          <span>Baguida / Agoè</span>
+          <span class="pricing-price">~1 500 FCFA</span>
+        </div>
+        <div class="pricing-row">
+          <span>Périphérie</span>
+          <span class="pricing-price">~2 000 FCFA</span>
+        </div>
+        <p class="pricing-note">Les prix exacts seront calculés automatiquement lors de la commande via l'API Gozem.</p>
+      </div>
+      <button class="gz-order-btn" onclick="Gozem.orderWithGozem()">
+        Commander maintenant avec livraison Gozem
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ livraison -->
+<section class="delivery-faq">
+  <div class="sec-hd reveal">
+    <span class="sec-tag">Questions fréquentes</span>
+    <h2 class="sec-title">Livraison <em>FAQ</em></h2>
+  </div>
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>Combien de temps prend la livraison ?</span>
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">La livraison standard est effectuée sous 24h après confirmation de votre commande. Pour les commandes passées avant 14h, la livraison peut se faire le jour même.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>Puis-je payer à la livraison ?</span>
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">Oui, le paiement cash à la livraison est disponible. Vous pouvez aussi payer via Flooz, T-Money ou carte bancaire directement au livreur Gozem.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>Comment suivre ma commande ?</span>
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">Dès que votre commande est prise en charge par Gozem, vous recevez un lien de suivi par SMS. Vous pouvez localiser votre livreur en temps réel sur la carte.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>Et si je ne suis pas disponible à la livraison ?</span>
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">Le livreur vous contactera par téléphone. Si vous n'êtes pas disponible, une nouvelle tentative de livraison sera planifiée. Vous pouvez aussi désigner une personne pour réceptionner à votre place.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span>Livrez-vous en dehors de Lomé ?</span>
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">Pour le moment, la livraison Gozem couvre Lomé et ses environs immédiats (Baguida, Agoè, Adidogomé). Pour d'autres villes du Togo, contactez-nous directement au +228 96 47 59 74.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="footer-logo">Sophiate <span>Création</span></span>
+      <p class="footer-desc">Créations africaines authentiques depuis Lomé, Togo.</p>
+      <div class="footer-socials">
+        <a class="footer-soc" href="https://instagram.com/sophiate_creation" target="_blank">IG</a>
+        <a class="footer-soc" href="https://wa.me/22896475974" target="_blank">WA</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Boutique</h4><ul>
+      <li><a href="boutique.html">Tous les produits</a></li>
+      <li><a href="collections.html">Collections</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Infos</h4><ul>
+      <li><a href="livraison.html">Livraison Gozem</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html#faq">FAQ</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="tel:+22896475974">+228 96 47 59 74</a></li>
+      <li><a href="tel:+22892030347">+228 92 03 03 47</a></li>
+      <li><a href="contact.html">Luxolin-Baguida, Lomé</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Sophiate Création</p>
+    <span class="powered">Développé par <strong>Up Tech Group</strong> · Livraison par <strong class="gz">Gozem</strong></span>
+  </div>
+</footer>
+
+<div id="cartModal">
+  <div class="cart-panel">
+    <div class="cart-panel-header"><h3>Mon Panier</h3><button class="cart-close" onclick="Cart.close()">✕</button></div>
+    <div id="cartItems"><p class="cart-empty">Votre panier est vide</p></div>
+    <div id="cartFooter" style="display:none" class="cart-footer">
+      <div class="cart-total"><span>Total</span><span class="cart-total-price" id="cartTotal">0 FCFA</span></div>
+      <button class="cart-checkout" onclick="Gozem.orderWithGozem()">Commander via Gozem</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/gozem.js"></script>
+<script>
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>

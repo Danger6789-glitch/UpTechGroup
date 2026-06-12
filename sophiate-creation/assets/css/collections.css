@@ -1,0 +1,70 @@
+/* ============================================================
+   SOPHIATE CRÉATION — collections.css
+   ============================================================ */
+.collection-section { padding: 90px 6%; }
+.collection-section.alt { background: var(--cream-light); }
+.coll-header { text-align: center; margin-bottom: 50px; }
+.coll-label {
+  display: inline-block; padding: 5px 16px; color: #fff;
+  font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.coll-header p { font-size: 14px; color: var(--muted); max-width: 480px; margin: 14px auto 0; line-height: 1.7; }
+
+.coll-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.coll-grid-rev { direction: rtl; }
+.coll-grid-rev > * { direction: ltr; }
+
+.coll-featured {
+  position: relative; overflow: hidden; cursor: none;
+  min-height: 420px;
+}
+.coll-featured img { width: 100%; height: 100%; object-fit: cover; }
+.coll-feat-ph {
+  width: 100%; height: 100%; min-height: 420px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+}
+.coll-feat-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 32px; background: linear-gradient(transparent, rgba(0,0,0,.8));
+  color: #fff; text-align: center;
+}
+.coll-feat-overlay strong { font-family:'Playfair Display',serif; font-size: 16px; display: block; }
+.coll-featured:hover .coll-feat-ph img { transform: scale(1.05); }
+
+.coll-mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.coll-mini {
+  position: relative; overflow: hidden; cursor: none;
+  min-height: 190px; transition: transform .3s;
+}
+.coll-mini:hover { transform: scale(.98); }
+.coll-mini img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .6; }
+.coll-mini-ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.coll-mini-body {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 16px; background: linear-gradient(transparent, rgba(0,0,0,.75));
+  color: #fff;
+}
+.coll-mini-body span  { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 3px; }
+.coll-mini-body strong { font-family:'Playfair Display',serif; font-size: 15px; font-weight: 700; display: block; }
+.cm-price { font-size: 11px; color: rgba(255,255,255,.65); margin-top: 3px; }
+.coll-mini-cta {
+  background: var(--cream-light) !important;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 600; color: var(--dark);
+  text-decoration: none; cursor: none; transition: background .2s;
+  border: 1px solid rgba(0,0,0,.06);
+}
+.coll-mini-cta:hover { background: var(--cream) !important; color: var(--orange); }
+.coll-mini-cta a { color: inherit; font-size: 14px; font-weight: 600; }
+
+@media (max-width: 900px) {
+  .coll-grid, .coll-grid-rev { grid-template-columns: 1fr; }
+  .coll-grid-rev { direction: ltr; }
+  .coll-mini-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 480px) {
+  .coll-mini-grid { grid-template-columns: 1fr; }
+}

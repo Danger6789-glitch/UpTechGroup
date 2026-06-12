@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Up Tech Group</title>
+  <meta name="description" content="Contactez Up Tech Group pour lancer un diagnostic digital ou demander un devis." />
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body class="home-redesign page-redesign">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Up Tech Group">
+        <img src="../assets/img/logo.svg" alt="Up Tech Group" class="brand-logo" />
+        <span class="brand-name">Up Tech Group</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="../index.html" data-i18n="nav.home">Accueil</a>
+        <a href="../expertises/index.html" data-i18n="nav.expertises">Expertises</a>
+        <a href="../secteurs/index.html" data-i18n="nav.sectors">Secteurs</a>
+        <a href="../faq/index.html" data-i18n="nav.faq">FAQ</a>
+        <a href="../blog/index.html" data-i18n="nav.blog">Blog</a>
+        <a href="index.html" aria-current="page" class="btn btn-small" data-i18n="nav.diagnosis">Digital diagnosis</a>
+        <button class="lang-toggle" type="button" id="langToggle" aria-label="Changer de langue">
+          <span id="langLabel">FR</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <p class="kicker" data-i18n="contact.kicker">Precision in communication</p>
+        <h1 data-i18n="contact.title">Let's blueprint your digital success.</h1>
+        <p data-i18n="contact.subtitle">Connectez-vous avec nos conseillers stratégiques ou lancez un diagnostic digital pour clarifier votre infrastructure, vos priorités et votre roadmap.</p>
+      </div>
+    </section>
+
+    <section class="section contact-diagnostic">
+      <div class="container contact-layout">
+        <form class="diagnosis-form" action="https://formspree.io/f/mdaldgdb" method="POST">
+          <div class="form-head">
+            <div>
+              <p class="kicker" data-i18n="contact.form.kicker">Diagnostic protocol</p>
+              <h2 data-i18n="contact.form.title">Digital Diagnosis</h2>
+            </div>
+            <span data-i18n="contact.form.step">Step 1 of 3</span>
+          </div>
+
+          <div class="form-grid">
+            <label>
+              <span data-i18n="contact.name">Nom complet</span>
+              <input name="name" required placeholder="John Doe" />
+            </label>
+            <label>
+              <span data-i18n="contact.company">Entreprise</span>
+              <input name="company" placeholder="Acme Corp" />
+            </label>
+          </div>
+
+          <label>
+            <span data-i18n="contact.email">Email</span>
+            <input type="email" name="email" required placeholder="contact@company.com" />
+          </label>
+
+          <label>
+            <span data-i18n="contact.website">Site web</span>
+            <input name="website" placeholder="https://www.example.com" />
+          </label>
+
+          <label>
+            <span data-i18n="contact.challenge">Challenge technique prioritaire</span>
+            <select name="challenge" required>
+              <option value="" data-i18n="contact.challenge.placeholder">Sélectionnez votre obstacle principal</option>
+              <option>Architecture & performance</option>
+              <option>Acquisition & tracking</option>
+              <option>Automatisation interne</option>
+              <option>Audit sécurité / fiabilité</option>
+            </select>
+          </label>
+
+          <label>
+            <span data-i18n="contact.context">Contexte additionnel</span>
+            <textarea name="message" rows="6" required placeholder="Décrivez votre stack, vos objectifs ou vos blocages..."></textarea>
+          </label>
+
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <button class="btn" type="submit" data-i18n="contact.submit">Start my diagnosis</button>
+        </form>
+
+        <aside class="contact-aside">
+          <div class="aside-card">
+            <p class="kicker" data-i18n="contact.hq">Headquarters</p>
+            <h3 data-i18n="contact.office">Lomé Office</h3>
+            <p data-i18n="footer.location">Lomé, Togo</p>
+            <a href="mailto:contact@uptech-group.com">contact@uptech-group.com</a>
+            <img src="../assets/img/contact-hero.jpg" alt="Professionnelle en salle serveur" />
+          </div>
+          <div class="aside-card compact">
+            <span data-i18n="contact.availability">Disponibilité</span>
+            <strong data-i18n="contact.availability.text">Nous acceptons de nouveaux partenariats stratégiques.</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-layout">
+        <div>
+          <p class="kicker" data-i18n="home.faq.kicker">Clarté</p>
+          <h2 data-i18n="home.faq.title">Questions fréquentes</h2>
+        </div>
+        <div class="faq">
+          <details open><summary data-i18n="faq.q1">Travaillez-vous uniquement au Togo ?</summary><p data-i18n="faq.a1">Non. Nous pouvons travailler à distance selon le projet, avec un cadre clair : brief, validation et livrables.</p></details>
+          <details><summary data-i18n="faq.q2">Pourquoi travailler sur devis ?</summary><p data-i18n="faq.a2">Parce que le périmètre, les délais, les intégrations et les exigences varient fortement selon l'organisation.</p></details>
+          <details><summary data-i18n="faq.q3">Pouvez-vous reprendre un projet existant ?</summary><p data-i18n="faq.a3">Oui, après audit de la qualité du code, de la performance, de la sécurité et des priorités produit.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Up Tech Group</strong>
+        <p data-i18n="footer.tagline">Parce que le numérique n’est pas un luxe, mais une nécessité.</p>
+        <span data-i18n="footer.location">Lomé, Togo</span>
+      </div>
+      <div class="footer-col">
+        <span data-i18n="footer.socials">Réseaux</span>
+        <a href="https://www.instagram.com/uptechgroup?igsh=eGZrcWtwbTJjMGx1&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/@up.tech.group?_r=1&_t=ZN-94opMtZcx0A" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://www.linkedin.com/company/uptechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <div class="footer-col">
+        <span data-i18n="footer.contact">Contact</span>
+        <a href="mailto:contact@uptech-group.com">contact@uptech-group.com</a>
+        <a href="index.html" data-i18n="common.quote">Demander un devis</a>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Up Tech Group.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Up Tech Group
+
+> Nous accompagnons les organisations dans leur transformation digitale. De la conception web à l'acquisition, en passant par l'automatisation et le conseil, nous construisons des solutions numériques structurées, scalables et orientées performance.
+
+Up Tech Group est une agence de transformation digitale basée à Lomé, Togo, opérant à distance selon les projets. L'approche est tech & stratégique : architecture, systèmes, gouvernance, conversion, tracking et optimisation.
+
+## Pages principales
+
+- [Accueil](https://uptech-group.com/): Présentation générale, expertises, méthodologie et FAQ
+- [Expertises](https://uptech-group.com/expertises): Les 4 piliers de services proposés
+- [Secteurs](https://uptech-group.com/secteurs): Approche adaptée aux startups, grandes entreprises et e-commerce
+- [À propos](https://uptech-group.com/a-propos): Vision, mission et valeurs d'Up Tech Group
+- [Contact](https://uptech-group.com/contact): Formulaire de demande de devis
+
+## Expertises
+
+- [Architecture & Développement Web](https://uptech-group.com/expertises/architecture-developpement-web): Conception et développement de sites et plateformes rapides, scalables, optimisés conversion et maintenables.
+- [Publicité & Acquisition Digitale](https://uptech-group.com/expertises/acquisition-digitale): Stratégie, tracking, campagnes Meta/Google et optimisation continue orientée ROI.
+- [Automatisation & Digitalisation](https://uptech-group.com/expertises/automatisation-digitalisation): Digitalisation de process, automatisations no-code et outils pour gagner en efficacité.
+- [Transformation Digitale & Conseil](https://uptech-group.com/expertises/transformation-digitale-conseil): Audit, roadmap, gouvernance et accompagnement pour structurer le digital à l'échelle.
+
+## Secteurs couverts
+
+- **Startups** : exécution rapide, scalabilité, acquisition et itérations produit
+- **Grandes entreprises & institutions** : gouvernance, process, modernisation des outils et pilotage
+- **E-commerce** : conversion, automatisation, tracking et optimisation continue
+
+## Informations de contact
+
+- Site : https://uptech-group.com
+- Email : contact@uptech-group.com
+- Localisation : Lomé, Togo (interventions à distance possibles)

@@ -1,0 +1,74 @@
+# ============================================
+# UP TECH GROUP — Workspace Security .htaccess
+# À placer dans public_html/workspace/
+# ============================================
+
+Options -Indexes
+ServerSignature Off
+
+# Pages d'erreur personnalisées
+ErrorDocument 404 /workspace/404.php
+ErrorDocument 500 /workspace/500.php
+ErrorDocument 403 /workspace/403.php
+
+# Bloquer l'accès direct aux fichiers sensibles
+<FilesMatch "^(config|auth|mailer|assistant)\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Bloquer l'accès aux fichiers SQL et de sauvegarde
+<FilesMatch "\.(sql|bak|backup|log|sh|env)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Bloquer l'accès aux fichiers cachés (.git, .env, etc.)
+<FilesMatch "^\.">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Protection contre les injections dans l'URL
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Bloquer les tentatives d'accès aux includes directement
+    RewriteRule ^includes/ - [F,L]
+
+    # Forcer HTTPS si disponible
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Headers de sécurité
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# Cache pour les assets statiques
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+# Compression GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json text/plain
+</IfModule>
+
+php_value upload_max_filesize 256M
+php_value post_max_size 256M
+php_value max_execution_time 300
+php_value max_input_time 300
+php_value memory_limit 256M

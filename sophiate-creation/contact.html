@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact & À propos – Sophiate Création</title>
+<link rel="icon" href="assets/img/logo/favicon.ico"/>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<link rel="stylesheet" href="assets/css/contact.css"/>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="toast"><div><strong class="t-title"></strong><span class="t-sub"></span></div></div>
+
+<div id="mobileMenu">
+  <button class="m-close" onclick="toggleMenu()">✕</button>
+  <a href="index.html">Accueil</a>
+  <a href="collections.html">Collections</a>
+  <a href="boutique.html">Boutique</a>
+  <a href="galerie.html">Galerie</a>
+  <a href="livraison.html">Livraison</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+</div>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Sophiate <span>Création</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="collections.html">Collections</a></li>
+    <li><a href="boutique.html">Boutique</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="livraison.html">Livraison</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="btn-cart" onclick="Cart.open()">Panier <span class="cart-badge">0</span></button>
+    <button class="nav-menu-btn" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> › Contact</div>
+    <h1>Contactez <em>Sophiate</em></h1>
+    <p>Commandes, sur mesure, questions — nous sommes là pour vous.</p>
+  </div>
+</div>
+
+<!-- Infos + Formulaire -->
+<section class="contact-section">
+  <div class="contact-grid">
+
+    <!-- Infos -->
+    <div class="contact-info reveal">
+      <div class="ci-block">
+        <h4>Nous appeler</h4>
+        <a href="tel:+22896475974" class="ci-link">+228 96 47 59 74</a>
+        <a href="tel:+22892030347" class="ci-link">+228 92 03 03 47</a>
+      </div>
+      <div class="ci-block">
+        <h4>WhatsApp</h4>
+        <a href="https://wa.me/22896475974" target="_blank" class="ci-link">+228 96 47 59 74</a>
+        <p class="ci-note">Envoyez vos mesures et photos directement par WhatsApp pour une commande sur mesure.</p>
+      </div>
+      <div class="ci-block">
+        <h4>Adresse & Horaires</h4>
+        <p class="ci-addr">Luxolin-Baguida, Lomé, Togo</p>
+        <p class="ci-note">Lundi – Samedi : 08h00 – 20h00</p>
+        <p class="ci-note">Dimanche : 10h00 – 17h00</p>
+      </div>
+      <div class="ci-block">
+        <h4>Réseaux sociaux</h4>
+        <a href="https://instagram.com/sophiate_creation" target="_blank" class="ci-social">Instagram — @sophiate_creation</a>
+        <a href="https://tiktok.com/@sophiate_creation" target="_blank" class="ci-social">TikTok — @sophiate_creation</a>
+      </div>
+      <!-- Photo atelier -->
+      <div class="atelier-photo">
+        <!-- <img src="assets/img/hero/atelier.jpg" alt="Atelier Sophiate Création"> -->
+        <div class="atelier-ph">
+          <span class="ph-label-atelier">assets/img/hero/atelier.jpg</span>
+          <span style="font-size:11px;color:rgba(255,255,255,.3)">Photo de l'atelier (optionnel)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulaire -->
+    <div class="contact-form-wrap reveal">
+      <h3>Envoyer un message</h3>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:28px">Pour une commande sur mesure, une question ou un partenariat.</p>
+
+      <form id="contactForm" onsubmit="sendContact(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cName">Nom complet *</label>
+            <input type="text" id="cName" placeholder="Votre nom" required/>
+          </div>
+          <div class="form-group">
+            <label for="cPhone">Téléphone</label>
+            <input type="tel" id="cPhone" placeholder="+228 XX XX XX XX"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cEmail">Email</label>
+          <input type="email" id="cEmail" placeholder="votre@email.com"/>
+        </div>
+        <div class="form-group">
+          <label for="cSubject">Sujet *</label>
+          <select id="cSubject" required>
+            <option value="">Choisir le sujet...</option>
+            <option value="commande">Passer une commande</option>
+            <option value="sur-mesure">Commande sur mesure</option>
+            <option value="livraison">Question livraison</option>
+            <option value="retour">Retour / échange</option>
+            <option value="partenariat">Partenariat</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-group" id="sur-mesure">
+          <label for="cMesures">Mensurations (si sur mesure)</label>
+          <input type="text" id="cMesures" placeholder="Poitrine, taille, hanches, hauteur en cm..."/>
+        </div>
+        <div class="form-group">
+          <label for="cMessage">Message *</label>
+          <textarea id="cMessage" rows="5" placeholder="Décrivez votre demande..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center">
+          Envoyer le message →
+        </button>
+        <!-- TODO : connecter à un vrai backend (Formspree, EmailJS, PHP mailer) -->
+        <!-- Formspree example : <form action="https://formspree.io/f/VOTRE_ID" method="POST"> -->
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- Sur mesure -->
+<section class="sur-mesure-section" id="sur-mesure">
+  <div class="sur-mesure-inner">
+    <div class="reveal">
+      <span class="sec-tag">Commandes personnalisées</span>
+      <h2 class="sec-title" style="color:#fff">Créations <em>sur mesure</em></h2>
+      <p style="font-size:15px;color:#9A8A6A;max-width:500px;margin:20px 0 36px;line-height:1.8">
+        Vous avez une idée précise ? Un tissu en tête ? Un événement spécial ? Nous créons la pièce unique qui vous ressemble — boubou, ensemble ou tenue de cérémonie.
+      </p>
+      <div class="sm-steps">
+        <div class="sm-step"><div class="sm-num">1</div><div><strong>Contactez-nous</strong><span>Par WhatsApp ou via le formulaire</span></div></div>
+        <div class="sm-step"><div class="sm-num">2</div><div><strong>Choisissez votre tissu</strong><span>Wax, bazin riche, ou apportez le vôtre</span></div></div>
+        <div class="sm-step"><div class="sm-num">3</div><div><strong>Envoyez vos mesures</strong><span>Poitrine, taille, hanches, hauteur</span></div></div>
+        <div class="sm-step"><div class="sm-num">4</div><div><strong>Réception via Gozem</strong><span>Votre création livrée sous 5–7 jours</span></div></div>
+      </div>
+      <a href="https://wa.me/22896475974?text=Bonjour%2C%20je%20voudrais%20une%20commande%20sur%20mesure" target="_blank" class="btn-primary" style="margin-top:36px;display:inline-flex">
+        Commander sur WhatsApp →
+      </a>
+    </div>
+    <div class="sur-mesure-img reveal">
+      <!-- <img src="assets/img/hero/sur-mesure.jpg" alt="Atelier sur mesure Sophiate"> -->
+      <div class="sm-img-ph">
+        <span class="ph-label">assets/img/hero/sur-mesure.jpg</span>
+        <span style="font-size:11px;color:rgba(255,255,255,.3)">Photo atelier sur mesure</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Témoignages -->
+<section style="padding:90px 6%;background:var(--cream-light)">
+  <div class="sec-hd reveal">
+    <span class="sec-tag">Avis clients</span>
+    <h2 class="sec-title">Ils nous font <em>confiance</em></h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"J'ai commandé un boubou pour le mariage de ma sœur, la qualité était incroyable ! La livraison Gozem est arrivée le lendemain matin. Je recommande à 1000% !"</p>
+      <div class="testi-author">
+        <div class="ta-avatar" style="background:var(--indigo);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;color:#fff">AK</div>
+        <div><div class="ta-name">Aminata K.</div><div class="ta-loc">Lomé, Togo</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:.1s">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"Le Grand Boubou Émeraude que j'ai reçu est tout simplement magnifique. Sophiate Création représente vraiment l'excellence de la mode togolaise."</p>
+      <div class="testi-author">
+        <div class="ta-avatar" style="background:var(--teal);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;color:#fff">KM</div>
+        <div><div class="ta-name">Kofi M.</div><div class="ta-loc">Baguida, Togo</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:.2s">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"Le Set Famille que nous avons reçu pour la fête était parfait. Tous les membres de la famille étaient assortis et élégants. Merci Sophiate !"</p>
+      <div class="testi-author">
+        <div class="ta-avatar" style="background:var(--crimson);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;color:#fff">AD</div>
+        <div><div class="ta-name">Afi D.</div><div class="ta-loc">Lomé, Togo</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="footer-logo">Sophiate <span>Création</span></span>
+      <p class="footer-desc">Créations africaines authentiques depuis Lomé, Togo.</p>
+      <div class="footer-socials">
+        <a class="footer-soc" href="https://instagram.com/sophiate_creation" target="_blank">IG</a>
+        <a class="footer-soc" href="https://wa.me/22896475974" target="_blank">WA</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Collections</h4><ul>
+      <li><a href="boutique.html">Boutique</a></li>
+      <li><a href="collections.html">Collections</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Infos</h4><ul>
+      <li><a href="livraison.html">Livraison</a></li>
+      <li><a href="contact.html#retours" id="retours">Retours</a></li>
+      <li><a href="contact.html#faq" id="faq">FAQ</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="tel:+22896475974">+228 96 47 59 74</a></li>
+      <li><a href="tel:+22892030347">+228 92 03 03 47</a></li>
+      <li><a href="#">Luxolin-Baguida, Lomé</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Sophiate Création</p>
+    <span class="powered">Développé par <strong>Up Tech Group</strong> · Livraison par <strong class="gz">Gozem</strong></span>
+  </div>
+</footer>
+
+<div id="cartModal">
+  <div class="cart-panel">
+    <div class="cart-panel-header"><h3>Mon Panier</h3><button class="cart-close" onclick="Cart.close()">✕</button></div>
+    <div id="cartItems"><p class="cart-empty">Votre panier est vide</p></div>
+    <div id="cartFooter" style="display:none" class="cart-footer">
+      <div class="cart-total"><span>Total</span><span class="cart-total-price" id="cartTotal">0 FCFA</span></div>
+      <button class="cart-checkout" onclick="Gozem.orderWithGozem()">Commander via Gozem</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/gozem.js"></script>
+<script>
+function sendContact(e) {
+  e.preventDefault();
+  const name    = document.getElementById('cName').value;
+  const subject = document.getElementById('cSubject').value;
+  const message = document.getElementById('cMessage').value;
+  const mesures = document.getElementById('cMesures').value;
+
+  /* TODO : Remplacer par un vrai envoi d'email
+     Option 1 — Formspree (gratuit) :
+       1. Va sur formspree.io et crée un formulaire
+       2. Remplace l'action du form par "https://formspree.io/f/TON_ID"
+       3. Ajoute method="POST" au form
+       4. Supprime onsubmit et ce script
+
+     Option 2 — EmailJS :
+       emailjs.send('SERVICE_ID','TEMPLATE_ID',{
+         from_name: name, subject, message
+       });
+
+     Option 3 — WhatsApp (simple et immédiat) :
+  */
+  const wa = `Bonjour Sophiate Création !\n\nNom: ${name}\nSujet: ${subject}\n${mesures ? 'Mesures: ' + mesures + '\n' : ''}Message: ${message}`;
+  window.open(`https://wa.me/22896475974?text=${encodeURIComponent(wa)}`, '_blank');
+  showToast('Message envoyé !', 'Nous vous répondrons sous 24h');
+  document.getElementById('contactForm').reset();
+}
+
+// Afficher/masquer le champ mesures si sur mesure
+document.getElementById('cSubject')?.addEventListener('change', function() {
+  const block = document.getElementById('sur-mesure');
+  if (block) block.style.display = this.value === 'sur-mesure' ? 'block' : 'none';
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const block = document.getElementById('sur-mesure');
+  if (block) block.style.display = 'none';
+});
+</script>
+</body>
+</html>
